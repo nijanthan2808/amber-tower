@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: amber-tower
+    env: node
+    plan: free
+    buildCommand: |
+      cd client && npm install && npm run build
+      cd ../server && npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: CLIENT_ORIGIN
+        value: https://theambertower.com
+      - key: FROM_EMAIL
+        value: bookings@theambertower.ie
+      - key: DEST_EMAIL
+        value: theambertower@gmail.com
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
