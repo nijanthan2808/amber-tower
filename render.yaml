@@ -4,20 +4,24 @@ services:
     env: node
     plan: free
     buildCommand: |
-      cd client && npm install --include=dev && npm run build
-      cd ../server && npm install
-    npm rebuild sqlite3 --build-from-source
+      cd client
+      npm ci --include=dev
+      npm run build
+      cd ../server
+      npm ci
+      npm rebuild sqlite3 --build-from-source
     startCommand: cd server && node server.js
-
     envVars:
       - key: NODE_ENV
         value: production
+      - key: NODE_VERSION
+        value: 20.11.1
       - key: PORT
         value: 10000
       - key: CLIENT_ORIGIN
         value: https://theambertower.com
       - key: FROM_EMAIL
-        value: bookings@theambertower.com
+        value: bookings@theambertower.ie
       - key: DEST_EMAIL
         value: theambertower@gmail.com
       - key: SMTP_HOST

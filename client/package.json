@@ -1,1 +1,24 @@
-{"name":"amber-tower-client","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite","build":"vite build","preview":"vite preview"},"dependencies":{"react":"^18.2.0","react-dom":"^18.2.0","react-router-dom":"^6.28.0"},"devDependencies":{"@vitejs/plugin-react":"^5.1.1","autoprefixer":"^10.4.18","postcss":"^8.4.35","tailwindcss":"^3.4.3","vite":"^5.4.8"}}
+    {
+    "name":"amber-tower-client",
+    "version":"1.0.0",
+    "private":true,
+    "type":"module",
+    "scripts":
+    {
+        "dev":"vite",
+        "build":"vite build",
+        "preview":"vite preview"
+    },
+    "dependencies":
+    {"react":"^18.2.0",
+        "react-dom":"^18.2.0",
+        "react-router-dom":"^6.28.0"},
+        "devDependencies":
+        {
+        "@vitejs/plugin-react":"^5.1.1",
+        "autoprefixer":"^10.4.18",
+        "postcss":"^8.4.35",
+        "tailwindcss":"^3.4.3",
+        "vite":"^5.4.8"
+        }
+    }

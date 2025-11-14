@@ -21,7 +21,7 @@ const FROM_EMAIL = process.env.FROM_EMAIL || 'theambertower@gmail.com';
 const DEST_EMAIL = process.env.DEST_EMAIL || 'theambertower@gmail.com';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const clientPath = path.join(__dirname, "./client-dist");
+const clientPath = path.join(__dirname, './client-dist');
 
 
 
@@ -141,9 +141,8 @@ app.post('/api/contact', async (req, res) => {
 
 app.use(express.static(clientPath));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(clientPath, "index.html"));
-});
+app.get('*', (req, res) => res.sendFile(path.join(clientPath, 'index.html')));
+
 
 
 app.listen(PORT, () => console.log(`API on http://localhost:${PORT}`));
